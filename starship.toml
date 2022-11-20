@@ -1,0 +1,160 @@
+format = """
+\
+[$character](bg:#de0055)\
+([$jobs](bg:#de0055))\
+\
+$username\
+$directory\
+[](fg:#8d02b8 bg:#de0055)\
+\
+\
+\
+(\
+[](fg:#de0055 bg:#0da68a)\
+$git_status\
+$git_branch\
+[](bg:#de0055 fg:#0da68a)\
+)\
+\
+\
+\
+(\
+$c\
+$elixir\
+$elm\
+$golang\
+$haskell\
+$java\
+$julia\
+$nodejs\
+$nim\
+$rust\
+$scala\
+)\
+\
+\
+\
+$docker_context\
+[](fg:#de0055)\
+\
+"""
+
+
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Disable the blank line at the start of the prompt
+add_newline = true
+
+# You can also replace your username with a neat symbol like  to save some space
+[username]
+show_always = false
+style_user = "#8d02b8"
+style_root = "#e35102 bold"
+format = '[](fg:#de0055 bg:$style)[$user ](bg:$style)[](fg:$style bg:#de0055)'
+
+[directory]
+style = "bg:#8d02b8"
+format = "[](fg:#de0055 $style)[$path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Code" = "💻"
+"Documents" = "📂"
+"Downloads" = "📥"
+"Music" = "🎧"
+"Pictures" = "📷"
+"Public" = "👤"
+"Templates" = "📐"
+"Videos" = "🎬"
+"~" = "🏠"
+
+[character]
+success_symbol = " "
+error_symbol = "[ ✗](bold fg:black bg:#fa1419)[](fg:#fa1419 bg:#de0055)"
+format = "$symbol"
+
+[jobs]
+symbol = "📋"
+number_threshold = 2
+symbol_threshold = 1
+style = "bg:#666666"
+format = "[](fg:#de0055 bg:#666666)[$symbol$number]($style)[](fg:#666666 bg:#de0055)"
+ 
+[c]
+symbol = " "
+style = "bg:#2ca600"
+format = '[](fg:#de0055 bg:#2ca600)[$symbol]($style)[](fg:#de0055 bg:#de0055)'
+
+[docker_context]
+symbol = " "
+style = "bg:#06969A"
+format = '[ $symbol $context ]($style) $path'
+
+[elixir]
+symbol = " "
+style = "bg:#2ca600"
+format = '[](fg:#de0055 bg:#2ca600)[$symbol]($style)[](fg:#2ca600 bg:#de0055)'
+
+[elm]
+symbol = " "
+style = "bg:#2ca600"
+format = '[](fg:#de0055 bg:#2ca600)[$symbol]($style)[](fg:#2ca600 bg:#de0055)'
+
+[git_branch]
+symbol = ""
+style = "bg:#0da68a"
+format = '[$symbol](fg:#2c5221 $style)[$branch]($style)'
+
+[git_status]
+style = "bg:#0da68a"
+conflicted = "😓 "
+modified = "[ ](fg:#2c5221 bg:#0da68a)"
+stashed = "[ $count ](fg:#2c5221 bg:#0da68a)"
+format = '[$all_status$ahead_behind]($style)'
+
+[golang]
+symbol = " "
+style = "bg:#2ca600"
+format = '[](fg:#de0055 bg:#2ca600)[$symbol]($style)[](fg:#2ca600 bg:#de0055)'
+
+[haskell]
+symbol = " "
+style = "bg:#2ca600"
+format = '[](fg:#de0055 bg:#2ca600)[$symbol]($style)[](fg:#2ca600 bg:#de0055)'
+
+[java]
+symbol = " "
+style = "bg:#2ca600"
+format = '[](fg:#de0055 bg:#2ca600)[$symbol]($style)[](fg:#2ca600 bg:#de0055)'
+
+[julia]
+symbol = " "
+style = "bg:#2ca600"
+format = '[](fg:#de0055 bg:#2ca600)[$symbol]($style)[](fg:#2ca600 bg:#de0055)'
+
+[nodejs]
+symbol = ""
+style = "bg:#2ca600"
+format = '[](fg:#de0055 bg:#2ca600)[$symbol]($style)[](fg:#2ca600 bg:#de0055)'
+
+[nim]
+symbol = " "
+style = "bg:#2ca600"
+format = '[](fg:#de0055 bg:#2ca600)[$symbol]($style)[](fg:#2ca600 bg:#de0055)'
+
+[rust]
+symbol = "🦀"
+style = "bg:#823026"
+format = '[](fg:#de0055 bg:#823026)[$symbol]($style)[](fg:#823026 bg:#de0055)'
+
+[scala]
+symbol = " "
+style = "bg:#2ca600"
+format = '[](fg:#de0055 bg:#2ca600)[$symbol]($style)[](fg:#2ca600 bg:#de0055)'
+
+[time]
+disabled = true
+time_format = "%R" # Hour:Minute Format
+style = "bg:#33658A"
+format = '[ ♥ $time ]($style)'
