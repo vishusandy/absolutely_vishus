@@ -1,16 +1,22 @@
 # Absolutely Vishus
 
-The best ever [Starship](https://starship.rs/) theme for a colorful and succinct terminal prompt.
+The best ever [Starship](https://starship.rs/) theme for an informative, colorful, and succinct terminal prompt.
 
-Regular user:
+## Screenshots
 
-![Regular user prompt for a Rust project with a git repo](absolutely_vishus_user-git-rust.png)
+![Demonstrating a git repo and error prompts](screenshots/git_and_error.png)
 
 Root user:
 
-![Root user prompt](absolutely_vishus_root.png)
+![Root user prompt](screenshots/root_user.png)
 
-For more examples see the [Screenshot](absolutely_vishus.png)
+Languages:
+
+![All of the supported languages](screenshots/languages.png)
+
+Stopped jobs:
+
+![Terminal prompt with stopped jobs](screenshots/jobs.png)
 
 
 ## Features
@@ -20,6 +26,8 @@ Includes support for the following modules out of the box: `character`, `jobs`, 
 - **User**
   
   - shows `root` in a bright color when logged in as root
+  
+  - displays a star when sudo credentials are cached
 
 - **Directories**
   
@@ -47,9 +55,7 @@ Includes support for the following modules out of the box: `character`, `jobs`, 
   
   - easy to customize languages; just change the `style = "..."` line
   
-  - custom icon and background for Rust
-
-
+  - customized for many languages
 
 ## Todo
 

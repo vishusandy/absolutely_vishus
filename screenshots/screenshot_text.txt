@@ -1,0 +1,11 @@
+                                                 cd ~/.config
+
+# this is a git repo
+
+
+
+
+                                                ls not-here.txt 2&> /dev/null
+
+# this is an error
+

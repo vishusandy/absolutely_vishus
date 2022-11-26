@@ -109,6 +109,7 @@ format = "[](fg:#de0055 bg:#666666)[$symbol$number]($style)[](fg:#666666 b
 symbol = ""
 style = "bg:#0da68a"
 format = '[$symbol](fg:#2c5221 $style)[$branch]($style)'
+disabled = true
 
 [git_status]
 style = "bg:#0da68a"
@@ -116,6 +117,7 @@ conflicted = "😓 "
 modified = "[ ](fg:#2c5221 bg:#0da68a)"
 stashed = "[ $count ](fg:#2c5221 bg:#0da68a)"
 format = '[$all_status$ahead_behind]($style)'
+disabled = true
 
 [c]
 symbol = "  "
@@ -180,7 +182,7 @@ style = "bold #4063d8"
 format = '[](fg:#de0055 bg:#222222)[$symbol](fg:$style bg:#222222)[](fg:#222222 bg:#de0055)'
 
 [kotlin]
-symbol = "🅺 "
+symbol = " 🅺 "
 style = "bold blue"
 format = '[](fg:#de0055 bg:#222222)[$symbol](fg:$style bg:#222222)[](fg:#222222 bg:#de0055)'
 
